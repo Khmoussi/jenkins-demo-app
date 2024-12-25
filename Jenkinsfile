@@ -22,7 +22,7 @@ pipeline{
         }
            stage("Build application "){
             steps{
-               cho '============== Build application =============='
+               echo '============== Build application =============='
                sh "mvn clean package"
             }
 
