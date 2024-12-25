@@ -7,24 +7,29 @@ pipeline{
     stages{
         stage("Clean up workspace"){
             steps{
+               echo '============== Clean up workspace =============='
                cleanWs()
             }
 
         }
          stage("Check up workspace"){
             steps{
+               echo '============== Check up workspace =============='
+
                git branch: 'main', credentialsId: 'github', url: 'https://github.com/Khmoussi/jenkins-demo-app.git'
             }
 
         }
            stage("Build application "){
             steps{
+               cho '============== Build application =============='
                sh "mvn clean package"
             }
 
         }
            stage("Test application "){
             steps{
+               echo '============== Test application =============='                
                sh "mvn test"
             }
 
