@@ -34,5 +34,12 @@ pipeline{
             }
 
         }
+         stage("Last stage "){
+            steps{
+               echo '============== Last stage =============='                
+               
+            }
+
+        }
     }
 }
